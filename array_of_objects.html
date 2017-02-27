@@ -1,0 +1,62 @@
+<html>
+<head> 
+	<tite> Student Portal
+ </title>
+
+ <script>
+ var s = [];
+ var i = 0;
+ function student(name,cat1,cat2,pbl,termend) {
+ 	this.name = name;
+ 	this.cat1 = parseInt(cat1);
+ 	this.cat2 = parseInt(cat2);
+ 	this.pbl = parseInt(pbl);
+ 	this.termend = parseInt(termend);
+ 	this.total = this.cat1 + this.cat2 + this.pbl + this.termend;
+ 	this.display = function() {
+ 		alert("Name: "+this.name +"Total: "+this.total);
+ 	}
+ }
+ function addStudent() {
+     name = document.getElementById("name").value;
+     cat1 = document.getElementById("cat1").value;
+     cat2 = document.getElementById("cat2").value;
+     pbl = document.getElementById("pbl").value;
+     termend = document.getElementById("termend").value;
+     s[i] = new student(name,cat1,cat2,pbl,termend);
+     s[i].display();
+     i++;
+
+
+
+}
+  function findTopper() {
+  	var max = 0;
+  	var pos;
+  	for(var j = 0; j < s.length; j++) {
+  		if(s[j].total > max) {
+  			max = s[j].total;
+  			pos = j;
+  		}
+  	}
+  	alert("Topper is: "+s[pos].name + " with marks: "+s[pos].total);
+  }
+
+
+</script>
+</head>
+
+<body>
+<input type = "text" id = "name">
+<input type = "text" id = "cat1">
+<input type = "text" id = "cat2">
+<input type = "text" id = "pbl">
+<input type = "text" id = "termend">
+<input type = "submit" onCLick = "addStudent()" value = "submit">
+<input type = "submit" onClick = "findTopper()" value = "find topper">
+
+
+
+
+</bdoy>
+</html>

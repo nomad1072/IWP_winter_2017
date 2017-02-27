@@ -1,0 +1,17 @@
+<script>
+
+function Circle(radius) {
+    this.radius = radius;
+    this.display = function(name) {
+    	alert(radius+" Name: "+name);
+    }
+}
+Circle.prototype.getArea = function() {
+	return Math.PI * Math.pow(this.radius,2);
+};
+var MyCircle = new Circle(10);
+alert(MyCircle.radius);
+alert(MyCircle.getArea());
+MyCircle.display("siddharth");
+
+</script>

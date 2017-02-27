@@ -1,0 +1,17 @@
+<script>
+k = function ipperString(a) {
+   
+      d = a.split("");   
+      for(var i = 0; i < d.length; i = i+2) {
+            b = a.charCodeAt(i);
+            d[i] = String.fromCharCode(b-32);
+      }
+      a = d.join("");
+      //alert(a);
+      return a; 
+};
+
+alert(k("sid"));
+
+
+</script>

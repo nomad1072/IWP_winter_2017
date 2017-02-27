@@ -1,0 +1,30 @@
+<script type="text/javascript">
+
+String.prototype.firstUpper = function(a) {
+	 alert("hi");
+     a = this;
+     d =  a.split("");
+     m = a.charCodeAt(0);
+     d[0] = String.fromCharCode(m - 32);
+     a = d.join("");
+     return a;
+};
+
+k = "siddharth";
+alert(k.firstUpper("ayush"));
+</script>
+
+
+<script>
+String.prototype.firstUpper = function(a) {
+      d = a.split("");
+      m = a.charCodeAt(0);
+      d[0] = String.fromCharCode(m - 32);
+      a = d.join("");
+};
+
+var k = "sid";
+
+
+
+</script>

@@ -1,0 +1,64 @@
+<script>
+firstLetterUpper = (function(b) {
+
+     d = b.split("");
+     if(b.charCodeAt(0) >= 97 && b.charCodeAt(0) <= 122) {
+          d[0] = String.fromCharCode(b.charCodeAt(0) - 32);
+          a = d.join("");
+     }
+     alert(a);
+   
+})("siddharth");
+
+function stringUpperAlternate(a) {
+   
+      d = a.split("");   
+      for(var i = 0; i < d.length; i = i+2) {
+            b = a.charCodeAt(i);
+            d[i] = String.fromCharCode(b-32);
+      }
+      a = d.join("");
+      alert(a);
+   
+}
+function maxLengthWord(a) {
+	d = a.split(" ");
+	var max = 0;
+    var pos;
+	for(var i =0; i < d.length; i++) {
+          if(d[i].length > max) {
+          	max = d[i].length;
+            pos = i;
+          }
+	}
+	alert(d[pos]+" has maximum length");
+}
+
+function maxOccurence(a) {
+	d = a.split(" ");
+	var max = 0;
+	var pos;
+	for(var i = 0; i < d.length; i++) {
+		d[i] = d[i].toLowerCase();
+	}
+	for(var j = 0; j < d.length; j++) {
+		var counter = 0;
+		for(var k = 0; k < d.length; k++) {
+			    if(d[k] == d[j]) {
+				    counter++;
+			}
+		if(counter > max) {
+		max = counter;
+		pos = d[j];
+	}
+
+	}
+	
+
+  }
+    alert(pos+" occurs most number of times");
+}
+maxOccurrence("what is this. what what what");
+stringUpperAlternate("siddharth");
+maxLengthWord("sid loves Barcelona");
+</script>

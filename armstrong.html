@@ -1,0 +1,41 @@
+<script>
+
+function armstrongNumber(a) {
+
+    sum = 0;
+    b1 = parseInt(a);
+	b = parseInt(a);
+	while (b != 0) {
+		d = b % 10;
+		b = parseInt(b/10);
+		sum += d*d*d;
+	}
+
+	if( sum == b1) {
+		alert("Number: "+b1+" is an armstrong number");
+	}
+	else {
+		alert("Not an amrmstrong number");
+	}
+}
+
+    primeNumber = function(b) {
+
+     var counter = 0;
+     n = parseInt(b);
+     for(var i = 2; i < n; i++) {
+     	if(n % i == 0) {
+     		counter++;
+     	}
+     }
+     if(counter > 0) {
+     	alert(n+' is not a Prime number');
+     }
+     else {
+     	alert(n+" is a prime number");
+     }
+};
+//primeNumber(5);
+armstrongNumber(153);
+
+</script>

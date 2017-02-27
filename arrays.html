@@ -1,0 +1,28 @@
+<script>
+
+var array = new Array();
+
+array[0] = "Siddharth";
+array[1] = 2;
+array[2] = function (name) {
+    alert("Hello "+ name);
+};
+array[3] = {course: "HTML, CSS and JS"};
+// to invoke the function
+
+array[2]("siddharth");
+alert(array);
+
+
+
+var names = ["sid","rajjo","ayush"];
+var names1 = [{name: "sid"},{name:"rajjo"},"ayush"];
+
+for(var i = 0; i < names.length; i++) {
+	alert("Hello: "+names[i]);
+}
+
+for(var name in names) {
+	alert("Hello"+names[name]) ;
+}
+</script>

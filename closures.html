@@ -1,0 +1,20 @@
+<script>
+function makeMultiplier(multiplier) {
+
+    function b() {
+    	alert("Multiplier is: "+multiplier);
+    }
+    b();
+	return {
+		function(x) {
+			return multiplier*x;
+			
+		}
+	};
+
+}
+
+var doubleAll = makeMultiplier(2);
+alert(doubleAll(10));
+
+</script>

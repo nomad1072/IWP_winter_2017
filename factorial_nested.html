@@ -1,0 +1,20 @@
+<script>
+
+function factorial() {
+   
+   return function(n) {
+           
+            if(n <= 1) {
+           	    return 1;
+           }
+           else {
+           	return n*arguments.callee(n-1);
+           }
+   };
+
+   alert(k);
+    	
+}
+a = factorial()(5);
+alert(a);
+</script>

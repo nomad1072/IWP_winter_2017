@@ -1,0 +1,45 @@
+<html>
+<head>
+<title> Javascript Calculator </title>
+<script>
+
+   function myFunctionAdd() {
+   a = parseInt(document.getElementById("number1").value);
+   b = parseInt(document.getElementById("number2").value);
+   c = a+b;
+   alert(c);
+}
+  function myFunctionSub() {
+  	a = parseInt(document.getElementById("number1").value);
+  	b = parseInt(document.getElementById("number2").value);
+  	c = a-b;
+   alert(c);
+  }
+  function myFunctionMul() {
+  	a = parseInt(document.getElementById("number1").value);
+  	b = parseInt(document.getElementById("number2").value);
+  	c = a*b;
+   alert(c);
+  }
+  function myFunctionDiv() {
+  	a = parseInt(document.getElementById("number1").value);
+  	b = parseInt(document.getElementById("number2").value);
+  	c = a/b;
+   alert(c);
+  }
+
+
+</script>
+</head>
+
+<body>
+
+<input type = "text" id = "number1">
+<input type = "text" id = "number2">
+<input type = "submit" onClick = "myFunctionAdd()"value = "Add">
+<input type = "submit" onClick = "myFunctionSub()"value = "Subtract">
+<input type = "submit" onClick = "myFunctionMul()"value = "Multiply">
+<input type = "submit" onClick = "myFunctionDiv()"value = "Divide">
+
+</body>
+</html>
