@@ -1,0 +1,47 @@
+<html>
+<head>
+	<title> GUI for events and elements</title>
+
+	<script type="text/javascript">
+    
+         function display(name) {
+         	if(name == "add") {
+
+         		 if(document.getElementById("event").checked == true) {
+
+         		 	document.getElementById("para").innerHTML = "Event Add instructions";
+         		 }
+         		 else {
+         		 	document.getElementById("para").innerHTML = "Element Add instructions";
+         		 }
+         	}
+
+         	else if(name == "remove") {
+         		if(document.getElementById("event").checked == true) {
+         			document.getElementById("para").innerHTML = "Event Remove instructions";
+         		}
+         		else {
+         			document.getElementById("para").innerHTML = "Element Remove instructions";
+         		}
+         	}
+         }
+
+	</script>
+</head>
+<body>
+
+      <form>
+
+           <input type = "radio" id = "event" name = "select" > Event </input>
+           <input type = "radio" id = "element" name = "select" > Element </input>
+      </form>
+
+      <br>
+
+      <input type = "button" name = "add" value = "Add" onclick = "display(this.name)"> </input>
+
+      <input type = "button" name = "remove" value = "Remove" onclick = "display(this.name)" > </input>
+
+      <p id = "para" > </p>
+</body>
+</html>

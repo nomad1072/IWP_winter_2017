@@ -1,0 +1,43 @@
+<html>
+   <head>
+        <title>
+          Dynamic Event handling
+        </title>
+
+        <script type = "text/javascript">
+
+            array = {"siddharth" : ['Pattern Classification','Data Mining and Data Warehousing'],"vaibhav" : ["Pattern Classification", "Data Mining and Data Warehousing"], "Angad": ["Modelling and Simulation","Distributed Systems"]};
+
+            function showElectives(id) {
+
+            	     p = document.createElement('p');
+            	     t = document.createTextNode(array[id]);
+            	     p.appendChild(t);
+            	     document.body.appendChild(p);
+                     alert(p);
+
+            }
+
+        </script>
+
+   </head>
+
+   <body>
+     
+       <table>
+
+           <tr>
+                <td id = "siddharth" onclick = "showElectives(this.id)" > Siddharth </td>
+            </tr>
+
+           	<tr>
+                <td id = "vaibhav" onclick = "showElectives(this.id)" > Vaibhav </td>
+            </tr>
+
+           	<tr>
+                 <td id = "Angad" onclick = "showElectives(this.id)" > Angad </td>
+             </tr>
+        </table>
+   </body>
+
+</html>

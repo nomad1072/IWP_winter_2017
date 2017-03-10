@@ -1,0 +1,25 @@
+<html>
+<head>
+	<title>. Testing document Object Module</title>
+
+	<script>
+    function abc() {
+    	var bt1 = document.createElement("Button");
+    	var text = document.createTextNode("Yo, hi");
+    	bt1.appendChild(text);
+    	document.body.appendChild(bt1);
+    	bt1.addEventListener("click",check);
+    }
+    function check() {
+    	alert("Hello 123");
+    }
+
+
+	</script>
+</head>
+<body>
+
+<input type = "button" value = "click" onclick = "abc()"></input>
+
+</body>
+</html>

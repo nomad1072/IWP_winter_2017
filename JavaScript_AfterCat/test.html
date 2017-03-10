@@ -1,0 +1,27 @@
+<html>
+<body>
+	<table>
+		<tr>
+			<td id="vihang" onclick="showElectives(this.id)">Vihang</td>
+		</tr>
+		<tr>
+			<td id="pratik" onclick="showElectives(this.id)">Pratik</td>
+		</tr>
+		<tr>
+			<td id="sarjak" onclick="showElectives(this.id)">Sarjak</td>
+		</tr>
+	</table>
+
+	<script type="text/javascript">
+		myarray = {'vihang': ['Pattern classification'], 'pratik':['Pattern classification'], 'sarjak':['Pattern classification', 'Adhoc Wireless']};
+		function showElectives(id){
+			p = document.createElement('p');
+			t = document.createTextNode(myarray[id]);
+			p.appendChild(t);
+			document.body.appendChild(p);
+			console.log(myarray['vihang']);
+
+		}
+	</script>
+</body>
+</html>
